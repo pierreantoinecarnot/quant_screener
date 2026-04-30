@@ -8,6 +8,10 @@ from src.factors.momentum import compute_momentum
 from src.factors.value import compute_value
 from src.factors.quality import compute_quality
 from src.scoring.scorer import score_stock
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 st.title("Quant Screener")
 
