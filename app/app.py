@@ -10,6 +10,12 @@ from src.factors.quality import compute_quality
 from src.scoring.scorer import score_stock
 import sys
 from pathlib import Path
+import os
+
+
+st.write("cwd:", os.getcwd())
+st.write("files:", os.listdir("."))
+st.write("src exists:", os.path.exists("src"))
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
