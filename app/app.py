@@ -2,12 +2,7 @@
 import streamlit as st
 import pandas as pd
 
-from src.data.universe import load_universe
-from src.data.loader import fetch_stock_data
-from src.factors.momentum import compute_momentum
-from src.factors.value import compute_value
-from src.factors.quality import compute_quality
-from src.scoring.scorer import score_stock
+
 import sys
 from pathlib import Path
 import os
@@ -18,7 +13,12 @@ st.write("files:", os.listdir("."))
 st.write("src exists:", os.path.exists("src"))
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-
+from src.data.universe import load_universe
+from src.data.loader import fetch_stock_data
+from src.factors.momentum import compute_momentum
+from src.factors.value import compute_value
+from src.factors.quality import compute_quality
+from src.scoring.scorer import score_stock
 st.title("Quant Screener")
 
 tickers = load_universe()
