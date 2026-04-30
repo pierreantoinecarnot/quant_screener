@@ -2,12 +2,12 @@
 import streamlit as st
 import pandas as pd
 
-from .src.data.universe import load_universe
-from .src.data.loader import fetch_stock_data
-from .src.factors.momentum import compute_momentum
-from .src.factors.value import compute_value
-from .src.factors.quality import compute_quality
-from .src.scoring.scorer import score_stock
+from src.data.universe import load_universe
+from src.data.loader import fetch_stock_data
+from src.factors.momentum import compute_momentum
+from src.factors.value import compute_value
+from src.factors.quality import compute_quality
+from src.scoring.scorer import score_stock
 import sys
 from pathlib import Path
 import os
